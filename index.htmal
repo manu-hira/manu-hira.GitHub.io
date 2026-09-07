@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Manu 822 | Official Website</title>
+
+  <meta name="description"
+        content="Manu 822 को Official Website — Creator, Chef & Digital Journey">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080b14;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.35;
+      z-index: -1;
+    }
+
+    body::before {
+      background: #6c5ce7;
+      top: 80px;
+      left: -100px;
+    }
+
+    body::after {
+      background: #00cec9;
+      right: -100px;
+      bottom: 80px;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 15px 7%;
+      background: rgba(8, 11, 20, 0.75);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #00cec9;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #00cec9;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+    }
+
+    .hero-box {
+      max-width: 850px;
+      padding: 45px 25px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 30px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 25px 80px rgba(0,0,0,0.35);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 30px;
+      background: rgba(0,206,201,0.12);
+      color: #00cec9;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 9vw, 85px);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #00cec9;
+    }
+
+    .hero p {
+      color: #c9cbd4;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #00cec9;
+      color: #071013;
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Sections */
+    section {
+      padding: 90px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #aeb1bc;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      padding: 28px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 22px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,206,201,0.5);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aeb1bc;
+      line-height: 1.6;
+    }
+
+    /* About */
+    .about {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 40px;
+      border-radius: 25px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .about p {
+      color: #c5c7d0;
+      line-height: 1.9;
+      font-size: 17px;
+    }
+
+    /* Social */
+    .social {
+      text-align: center;
+    }
+
+    .social a {
+      display: inline-block;
+      margin: 8px;
+      padding: 13px 20px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .social a:hover {
+      background: #00cec9;
+      color: #061010;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #8e919c;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Mobile */
+    @media (max-width: 650px) {
+      header {
+        padding: 13px 5%;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .hero-box {
+        padding: 35px 18px;
+      }
+
+      section {
+        padding: 70px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">MANU<span>822</span></div>
+
+      <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-box">
+
+      <div class="badge">
+        ✨ Welcome to my official website
+      </div>
+
+      <h1>
+        Manu <span>822</span>
+      </h1>
+
+      <p>
+        नमस्कार! 🙏<br>
+        यो मेरो Official Website हो।
+        यहाँ मेरो सिर्जना, यात्रा, काम र Social Media
+        को संसारसँग जोडिन सक्नुहुन्छ।
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn primary"
+           href="https://youtube.com/@m.s.m.822?si=D35aTeijFgn-tdja"
+           target="_blank">
+          ▶ YouTube Channel
+        </a>
+
+        <a class="btn secondary" href="#about">
+          मेरो बारेमा ↓
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+
+    <div class="section-title">
+      <h2>मेरो बारेमा</h2>
+      <p>My Journey • My Work • My Story</p>
+    </div>
+
+    <div class="about">
+
+      <p>
+        नमस्कार, म Manu 822। 🙏
+        यो वेबसाइट मेरो Digital Journey लाई एउटै ठाउँमा
+        प्रस्तुत गर्न बनाइएको हो।
+        यहाँ तपाईंले मेरा नयाँ सिर्जना, भिडियो,
+        Social Media र भविष्यका प्रोजेक्टहरूबारे जानकारी पाउन सक्नुहुन्छ।
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- WORK -->
+  <section id="work">
+
+    <div class="section-title">
+      <h2>मेरो संसार</h2>
+      <p>What I do</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🎥</div>
+        <h3>Content Creator</h3>
+        <p>
+          नयाँ र रोचक भिडियो तथा Digital Content
+          निर्माण गर्ने मेरो यात्रा।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">👨‍🍳</div>
+        <h3>Chef</h3>
+        <p>
+          खाना पकाउने कला, अनुभव र नयाँ
+          स्वादसँग जोडिएको मेरो संसार।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎵</div>
+        <h3>Music & Creativity</h3>
+        <p>
+          Music, Story र Creative Ideas मार्फत
+          नयाँ कुरा प्रस्तुत गर्ने प्रयास।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌍</div>
+        <h3>My Journey</h3>
+        <p>
+          संघर्ष, मेहनत र नयाँ अनुभवबाट
+          अगाडि बढ्ने यात्रा।
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOCIAL -->
+  <section id="contact">
+
+    <div class="section-title">
+      <h2>Connect With Me</h2>
+      <p>Social Media मा जोडिनुहोस् ❤️</p>
+    </div>
+
+    <div class="social">
+
+      <a href="https://youtube.com/@m.s.m.822?si=D35aTeijFgn-tdja"
+         target="_blank">
+        ▶ YouTube
+      </a>
+
+      <a href="#">
+        f Facebook
+      </a>
+
+      <a href="#">
+        ◎ Instagram
+      </a>
+
+      <a href="#">
+        ♪ TikTok
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Manu 822 • All Rights Reserved
+    </p>
+
+    <p style="margin-top:8px;">
+      Made with ❤️ and creativity
+    </p>
+
+  </footer>
+
+
+</body>
+  </html>
