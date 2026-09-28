@@ -19,17 +19,20 @@
         content="नमस्कार! 🙏 म Manu Salami Magar। यो मेरो Official Website हो।">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://manu-hira.github.io/">
-  <meta property="og:image" content="https://manu-hira.github.io/profile_new.jpg">
+  <meta property="og:image"
+        content="https://manu-hira.github.io/profile_new.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Manu And Hira | Official Website">
-  <meta name="twitter:description" content="Manu Salami Magar को Official Website">
-  <meta name="twitter:image" content="https://manu-hira.github.io/profile_new.jpg">
+  <meta name="twitter:description"
+        content="Manu Salami Magar को Official Website">
+  <meta name="twitter:image"
+        content="https://manu-hira.github.io/profile_new.jpg">
 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- GoatCounter Visitor Counter -->
+  <!-- GoatCounter -->
   <script
     data-goatcounter="https://manu-hira.goatcounter.com/count"
     async
@@ -55,113 +58,596 @@
   </script>
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-    body{font-family:Arial,sans-serif;background:#070b14;color:white;line-height:1.7;overflow-x:hidden}
-    body::before{content:"";position:fixed;width:500px;height:500px;background:#6c63ff;filter:blur(180px);opacity:.16;top:-200px;left:-150px;z-index:-1}
-    body::after{content:"";position:fixed;width:450px;height:450px;background:#00d4ff;filter:blur(180px);opacity:.12;bottom:-200px;right:-150px;z-index:-1}
 
-    header{position:sticky;top:0;z-index:1000;background:rgba(7,11,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-    nav{max-width:1100px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-size:23px;font-weight:bold;letter-spacing:1px;white-space:nowrap}
-    .logo .manu,.hero h1 .manu{color:white}
-    .logo .and,.hero h1 .and{color:#ffd43b}
-    .logo .hira,.hero h1 .hira{color:#00d4ff}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
 
-    nav ul{list-style:none;display:flex;gap:22px}
-    nav ul li a{color:white;text-decoration:none;font-size:14px;transition:.3s}
-    nav ul li a:hover{color:#00d4ff}
+    body{
+      font-family:Arial,sans-serif;
+      background:#070b14;
+      color:white;
+      line-height:1.7;
+      overflow-x:hidden;
+    }
 
-    section{max-width:1100px;margin:auto;padding:80px 20px}
-    .hero{min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column}
-    .badge{display:inline-block;padding:8px 18px;border:1px solid rgba(255,255,255,.15);border-radius:30px;background:rgba(255,255,255,.05);margin-bottom:25px;font-size:14px}
+    body::before{
+      content:"";
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#6c63ff;
+      filter:blur(180px);
+      opacity:.16;
+      top:-200px;
+      left:-150px;
+      z-index:-1;
+    }
 
-    /* Visitor statistics */
-    .visitor-wrap{width:100%;max-width:950px;margin:0 auto 30px}
-    .visitor-title{text-align:center;color:#aeb5c5;font-size:13px;margin-bottom:10px}
-    .visitor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-    .visitor-card{border:1px solid rgba(0,212,255,.38);background:rgba(9,20,43,.72);border-radius:18px;padding:15px 8px;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:.25s;box-shadow:0 0 18px rgba(0,212,255,.05)}
-    .visitor-card:hover{transform:translateY(-3px);background:rgba(15,31,60,.9)}
-    .visitor-card i{font-size:25px;margin-bottom:5px}
-    .visitor-card:nth-child(1) i{color:#00d4ff}
-    .visitor-card:nth-child(2) i{color:#32e6a8}
-    .visitor-card:nth-child(3) i{color:#ff55c8}
-    .visitor-card:nth-child(4) i{color:#ffd43b}
-    .visitor-card .label{font-size:14px;color:#d8deea}
-    .visitor-card .number{font-size:25px;font-weight:bold;margin-top:2px}
-    .visitor-card:nth-child(1) .number{color:#00d4ff}
-    .visitor-card:nth-child(2) .number{color:#32e6a8}
-    .visitor-card:nth-child(3) .number{color:#ff55c8}
-    .visitor-card:nth-child(4) .number{color:#ffd43b}
-    .visitor-card .small{font-size:11px;color:#9da8bb;margin-top:2px}
-    .visitor-help{font-size:11px;color:#8995aa;text-align:center;margin-top:7px}
+    body::after{
+      content:"";
+      position:fixed;
+      width:450px;
+      height:450px;
+      background:#00d4ff;
+      filter:blur(180px);
+      opacity:.12;
+      bottom:-200px;
+      right:-150px;
+      z-index:-1;
+    }
 
-    /* Visitor modal */
-    .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:3000;padding:25px;align-items:center;justify-content:center}
-    .modal.show{display:flex}
-    .modal-box{width:min(470px,100%);background:#0b1223;border:1px solid rgba(0,212,255,.35);border-radius:22px;padding:25px;box-shadow:0 20px 70px rgba(0,0,0,.5);position:relative}
-    .modal-box h3{font-size:22px;margin-bottom:12px}
-    .modal-box p{color:#c6cedd;font-size:14px;margin-bottom:12px}
-    .detail-list{display:grid;gap:8px;margin:15px 0}
-    .detail{display:flex;justify-content:space-between;gap:15px;background:rgba(255,255,255,.05);border-radius:12px;padding:9px 12px;font-size:13px}
-    .detail span:first-child{color:#9eabc0}
-    .detail span:last-child{color:white;text-align:right}
-    .close-modal{position:absolute;right:12px;top:10px;border:0;background:transparent;color:white;font-size:25px;cursor:pointer}
-    .stats-link{display:inline-block;margin-top:5px;padding:9px 15px;border-radius:20px;background:#00d4ff;color:#001018;text-decoration:none;font-weight:bold;font-size:13px}
+    /* HEADER */
 
-    .profile-photo{width:210px;height:210px;border-radius:50%;overflow:hidden;margin-bottom:25px;border:4px solid #00d4ff;box-shadow:0 0 35px rgba(0,212,255,.35)}
-    .profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(7,11,20,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
 
-    .hero h1{font-size:clamp(42px,8vw,80px);line-height:1.15;margin-bottom:20px;white-space:nowrap}
-    .hero p{max-width:760px;font-size:18px;color:#d0d4df;margin-bottom:30px}
-    .hero p strong{color:white}
+    nav{
+      max-width:1100px;
+      margin:auto;
+      padding:15px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
 
-    .social-title{font-size:20px;font-weight:bold;margin-bottom:17px}
-    .socials{display:flex;flex-wrap:wrap;justify-content:center;gap:13px;margin-bottom:32px;max-width:850px}
-    .socials a{display:flex;align-items:center;gap:9px;padding:11px 19px;border-radius:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:white;text-decoration:none;transition:.3s}
-    .socials a:hover{transform:translateY(-4px);background:rgba(255,255,255,.14)}
-    .socials i{font-size:21px}
-    .facebook i{color:#1877F2}
-    .youtube i{color:#FF0000}
-    .tiktok i{color:#25F4EE;text-shadow:2px 2px 0 #FE2C55}
-    .instagram i{color:#E4405F}
+    .logo{
+      font-size:23px;
+      font-weight:bold;
+      letter-spacing:1px;
+      white-space:nowrap;
+    }
 
-    .about-btn{display:inline-block;padding:12px 27px;border-radius:30px;background:#00d4ff;color:#001018;font-weight:bold;text-decoration:none;transition:.3s}
-    .about-btn:hover{transform:translateY(-3px)}
+    .logo .manu,
+    .hero h1 .manu{
+      color:white;
+    }
 
-    .section-title{text-align:center;margin-bottom:45px}
-    .section-title h2{font-size:36px;margin-bottom:8px}
-    .section-title p{color:#aeb5c5}
+    .logo .and,
+    .hero h1 .and{
+      color:#ffd43b;
+    }
 
-    .about-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:35px;border-radius:20px;text-align:center}
-    .about-box p{color:#d5d9e3;font-size:17px}
+    .logo .hira,
+    .hero h1 .hira{
+      color:#00d4ff;
+    }
 
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-    .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px 22px;text-align:center;transition:.3s}
-    .card:hover{transform:translateY(-7px);background:rgba(255,255,255,.08)}
-    .card i{font-size:38px;color:#00d4ff;margin-bottom:15px}
-    .card h3{margin-bottom:10px}
-    .card p{color:#b9c0ce;font-size:14px}
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:22px;
+    }
 
-    .contact-box{text-align:center;background:rgba(255,255,255,.05);padding:45px 20px;border-radius:20px;border:1px solid rgba(255,255,255,.08)}
-    .contact-box p{color:#c8ceda;margin-bottom:20px}
-    .contact-btn{display:inline-block;padding:12px 25px;background:#00d4ff;color:#001018;border-radius:30px;text-decoration:none;font-weight:bold}
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-size:14px;
+      transition:.3s;
+    }
 
-    footer{text-align:center;padding:30px 20px;border-top:1px solid rgba(255,255,255,.08);color:#8991a2;font-size:14px}
+    nav ul li a:hover{
+      color:#00d4ff;
+    }
+
+    /* SECTION */
+
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:80px 20px;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:90vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      flex-direction:column;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:8px 18px;
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:30px;
+      background:rgba(255,255,255,.05);
+      margin-bottom:25px;
+      font-size:14px;
+    }
+
+    /* =========================
+       COMPACT VISITOR COUNTER
+       ========================= */
+
+    .visitor-wrap{
+      width:100%;
+      max-width:650px;
+      margin:0 auto 28px;
+    }
+
+    .visitor-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:7px;
+    }
+
+    .visitor-card{
+      min-width:0;
+      padding:9px 3px;
+      border:1px solid rgba(0,212,255,.25);
+      background:rgba(9,20,43,.72);
+      border-radius:12px;
+      text-align:center;
+      cursor:pointer;
+      transition:.25s;
+    }
+
+    .visitor-card:hover{
+      transform:translateY(-2px);
+      background:rgba(15,31,60,.9);
+    }
+
+    .visitor-card i{
+      display:block;
+      font-size:17px;
+      margin-bottom:1px;
+    }
+
+    .visitor-card:nth-child(1) i{
+      color:#00d4ff;
+    }
+
+    .visitor-card:nth-child(2) i{
+      color:#32e6a8;
+    }
+
+    .visitor-card:nth-child(3) i{
+      color:#ff55c8;
+    }
+
+    .visitor-card:nth-child(4) i{
+      color:#ffd43b;
+    }
+
+    .visitor-card .number{
+      font-size:16px;
+      font-weight:bold;
+      line-height:1.2;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .visitor-card:nth-child(1) .number{
+      color:#00d4ff;
+    }
+
+    .visitor-card:nth-child(2) .number{
+      color:#32e6a8;
+    }
+
+    .visitor-card:nth-child(3) .number{
+      color:#ff55c8;
+    }
+
+    .visitor-card:nth-child(4) .number{
+      color:#ffd43b;
+    }
+
+    .visitor-card .label{
+      font-size:9px;
+      color:#aeb5c5;
+      line-height:1.2;
+      margin-top:2px;
+    }
+
+    .visitor-note{
+      font-size:10px;
+      color:#7f8a9d;
+      text-align:center;
+      margin-top:6px;
+    }
+
+    /* PROFILE */
+
+    .profile-photo{
+      width:210px;
+      height:210px;
+      border-radius:50%;
+      overflow:hidden;
+      margin-bottom:25px;
+      border:4px solid #00d4ff;
+      box-shadow:0 0 35px rgba(0,212,255,.35);
+    }
+
+    .profile-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .hero h1{
+      font-size:clamp(42px,8vw,80px);
+      line-height:1.15;
+      margin-bottom:20px;
+      white-space:nowrap;
+    }
+
+    .hero p{
+      max-width:760px;
+      font-size:18px;
+      color:#d0d4df;
+      margin-bottom:30px;
+    }
+
+    .hero p strong{
+      color:white;
+    }
+
+    /* SOCIAL */
+
+    .social-title{
+      font-size:20px;
+      font-weight:bold;
+      margin-bottom:17px;
+    }
+
+    .socials{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:13px;
+      margin-bottom:32px;
+      max-width:850px;
+    }
+
+    .socials a{
+      display:flex;
+      align-items:center;
+      gap:9px;
+      padding:11px 19px;
+      border-radius:30px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.12);
+      color:white;
+      text-decoration:none;
+      transition:.3s;
+    }
+
+    .socials a:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,.14);
+    }
+
+    .socials i{
+      font-size:21px;
+    }
+
+    .facebook i{
+      color:#1877F2;
+    }
+
+    .youtube i{
+      color:#FF0000;
+    }
+
+    .tiktok i{
+      color:#25F4EE;
+      text-shadow:2px 2px 0 #FE2C55;
+    }
+
+    .instagram i{
+      color:#E4405F;
+    }
+
+    .about-btn{
+      display:inline-block;
+      padding:12px 27px;
+      border-radius:30px;
+      background:#00d4ff;
+      color:#001018;
+      font-weight:bold;
+      text-decoration:none;
+      transition:.3s;
+    }
+
+    .about-btn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* SECTIONS */
+
+    .section-title{
+      text-align:center;
+      margin-bottom:45px;
+    }
+
+    .section-title h2{
+      font-size:36px;
+      margin-bottom:8px;
+    }
+
+    .section-title p{
+      color:#aeb5c5;
+    }
+
+    .about-box{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      padding:35px;
+      border-radius:20px;
+      text-align:center;
+    }
+
+    .about-box p{
+      color:#d5d9e3;
+      font-size:17px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      padding:30px 22px;
+      text-align:center;
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-7px);
+      background:rgba(255,255,255,.08);
+    }
+
+    .card i{
+      font-size:38px;
+      color:#00d4ff;
+      margin-bottom:15px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:#b9c0ce;
+      font-size:14px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      text-align:center;
+      background:rgba(255,255,255,.05);
+      padding:45px 20px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .contact-box p{
+      color:#c8ceda;
+      margin-bottom:20px;
+    }
+
+    .contact-btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#00d4ff;
+      color:#001018;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:#8991a2;
+      font-size:14px;
+    }
+
+    /* MODAL */
+
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.72);
+      z-index:3000;
+      padding:25px;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .modal.show{
+      display:flex;
+    }
+
+    .modal-box{
+      width:min(470px,100%);
+      background:#0b1223;
+      border:1px solid rgba(0,212,255,.35);
+      border-radius:22px;
+      padding:25px;
+      box-shadow:0 20px 70px rgba(0,0,0,.5);
+      position:relative;
+    }
+
+    .modal-box h3{
+      font-size:22px;
+      margin-bottom:12px;
+    }
+
+    .modal-box p{
+      color:#c6cedd;
+      font-size:14px;
+      margin-bottom:12px;
+    }
+
+    .detail-list{
+      display:grid;
+      gap:8px;
+      margin:15px 0;
+    }
+
+    .detail{
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      background:rgba(255,255,255,.05);
+      border-radius:12px;
+      padding:9px 12px;
+      font-size:13px;
+    }
+
+    .detail span:first-child{
+      color:#9eabc0;
+    }
+
+    .detail span:last-child{
+      color:white;
+      text-align:right;
+    }
+
+    .close-modal{
+      position:absolute;
+      right:12px;
+      top:10px;
+      border:0;
+      background:transparent;
+      color:white;
+      font-size:25px;
+      cursor:pointer;
+    }
+
+    .stats-link{
+      display:inline-block;
+      margin-top:5px;
+      padding:9px 15px;
+      border-radius:20px;
+      background:#00d4ff;
+      color:#001018;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:13px;
+    }
+
+    /* MOBILE */
 
     @media(max-width:700px){
-      nav{flex-direction:column;gap:10px}
-      nav ul{gap:15px;flex-wrap:wrap;justify-content:center}
-      nav ul li a{font-size:13px}
-      .hero{min-height:85vh}
-      .profile-photo{width:175px;height:175px}
-      .hero h1{font-size:42px;white-space:normal}
-      .hero p{font-size:16px}
-      .socials a{padding:10px 15px;font-size:14px}
-      .about-box{padding:25px 18px}
-      .visitor-grid{grid-template-columns:repeat(2,1fr)}
-      .visitor-card{min-height:105px}
-      .visitor-card .number{font-size:22px}
+
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+
+      nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      nav ul li a{
+        font-size:13px;
+      }
+
+      .hero{
+        min-height:85vh;
+      }
+
+      .profile-photo{
+        width:175px;
+        height:175px;
+      }
+
+      .hero h1{
+        font-size:42px;
+        white-space:normal;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .socials a{
+        padding:10px 15px;
+        font-size:14px;
+      }
+
+      .about-box{
+        padding:25px 18px;
+      }
+
+      /* चारवटै एउटै लाइनमा */
+      .visitor-grid{
+        grid-template-columns:repeat(4,1fr);
+        gap:4px;
+      }
+
+      .visitor-card{
+        padding:8px 2px;
+        border-radius:10px;
+      }
+
+      .visitor-card i{
+        font-size:15px;
+      }
+
+      .visitor-card .number{
+        font-size:13px;
+      }
+
+      .visitor-card .label{
+        font-size:8px;
+      }
+
+      .visitor-note{
+        font-size:9px;
+      }
     }
+
   </style>
 </head>
 
@@ -169,6 +655,7 @@
 
 <header>
   <nav>
+
     <div class="logo">
       <span class="manu">Manu</span>
       <span class="and"> And </span>
@@ -181,284 +668,559 @@
       <li><a href="#work">Work</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 </header>
 
+
+<!-- HOME -->
+
 <section class="hero" id="home">
 
-  <!-- Visitor statistics -->
+  <!-- COMPACT REAL VISITOR COUNTER -->
+
   <div class="visitor-wrap">
+
     <div class="visitor-grid">
 
-      <div class="visitor-card" onclick="openVisitorModal('views')">
+      <div class="visitor-card"
+           onclick="openVisitorModal('views')">
+
         <i class="fas fa-eye"></i>
-        <div class="label">Total Views</div>
-        <div class="number" id="totalViews">—</div>
-        <div class="small">पूरै वेबसाइट</div>
+
+        <div class="number" id="totalViews">
+          …
+        </div>
+
+        <div class="label">
+          Views
+        </div>
+
       </div>
 
-      <div class="visitor-card" onclick="openVisitorModal('visitors')">
+
+      <div class="visitor-card"
+           onclick="openVisitorModal('visitors')">
+
         <i class="fas fa-user"></i>
-        <div class="label">Visitors</div>
-        <div class="number" id="visitors">—</div>
-        <div class="small">Visitor data</div>
+
+        <div class="number" id="visitors">
+          …
+        </div>
+
+        <div class="label">
+          Visitors
+        </div>
+
       </div>
 
-      <div class="visitor-card" onclick="openVisitorModal('today')">
-        <i class="fas fa-calendar-days"></i>
-        <div class="label">Today's Views</div>
-        <div class="number" id="todayViews">—</div>
-        <div class="small">आजको view</div>
+
+      <div class="visitor-card"
+           onclick="openVisitorModal('today')">
+
+        <i class="fas fa-calendar-day"></i>
+
+        <div class="number" id="todayViews">
+          …
+        </div>
+
+        <div class="label">
+          Today
+        </div>
+
       </div>
 
-      <div class="visitor-card" onclick="openVisitorModal('location')">
+
+      <div class="visitor-card"
+           onclick="openVisitorModal('source')">
+
         <i class="fas fa-globe"></i>
-        <div class="label">Location</div>
-        <div class="number" id="locationText">—</div>
-        <div class="small">सामान्य location</div>
+
+        <div class="number" id="sourceText">
+          —
+        </div>
+
+        <div class="label">
+          Source
+        </div>
+
       </div>
 
     </div>
 
-    <div class="visitor-help">
-      कुनै card मा टच गरेर थप जानकारी हेर्नुहोस्
+    <div class="visitor-note">
+      Live website statistics
     </div>
+
   </div>
 
-  <div class="badge">✨ Welcome to my official website</div>
+
+  <div class="badge">
+    ✨ Welcome to my official website
+  </div>
+
 
   <div class="profile-photo">
-    <img src="profile_new.jpg" alt="Manu Salami Magar">
+
+    <img
+      src="profile_new.jpg"
+      alt="Manu Salami Magar">
+
   </div>
 
+
   <h1>
-    <span class="manu">Manu</span>
-    <span class="and"> And </span>
-    <span class="hira">Hira</span>
+
+    <span class="manu">
+      Manu
+    </span>
+
+    <span class="and">
+      And
+    </span>
+
+    <span class="hira">
+      Hira
+    </span>
+
   </h1>
 
+
   <p>
-    नमस्कार! 🙏 म <strong>Manu Salami Magar</strong><br>
-    यो मेरो Official Website हो। यहाँ मेरो सिर्जना, यात्रा,
-    काम र Social Media को संसारसँग जोडिन सक्नुहुन्छ।
+
+    नमस्कार! 🙏 म
+    <strong>Manu Salami Magar</strong><br>
+
+    यो मेरो Official Website हो।
+    यहाँ मेरो सिर्जना, यात्रा,
+    काम र Social Media को
+    संसारसँग जोडिन सक्नुहुन्छ।
+
   </p>
 
-  <div class="social-title">🔗 Connect With Me ❤️</div>
+
+  <div class="social-title">
+    🔗 Connect With Me ❤️
+  </div>
+
 
   <div class="socials">
 
-    <a class="facebook"
-       href="https://www.facebook.com/share/1CH7VyjcPX/"
-       target="_blank"
-       rel="noopener noreferrer">
-       <i class="fab fa-facebook"></i>Facebook
+    <a
+      class="facebook"
+      href="https://www.facebook.com/share/1CH7VyjcPX/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <i class="fab fa-facebook"></i>
+      Facebook
+
     </a>
 
-    <a class="facebook"
-       href="https://www.facebook.com/share/1GZbSuEcnR/"
-       target="_blank"
-       rel="noopener noreferrer">
-       <i class="fab fa-facebook"></i>Facebook Page
+
+    <a
+      class="facebook"
+      href="https://www.facebook.com/share/1GZbSuEcnR/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <i class="fab fa-facebook"></i>
+      Facebook Page
+
     </a>
 
-    <a class="youtube"
-       href="https://youtube.com/@m.s.m.822"
-       target="_blank"
-       rel="noopener noreferrer">
-       <i class="fab fa-youtube"></i>YouTube
+
+    <a
+      class="youtube"
+      href="https://youtube.com/@m.s.m.822"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <i class="fab fa-youtube"></i>
+      YouTube
+
     </a>
 
-    <a class="tiktok"
-       href="https://www.tiktok.com/@manu.s822"
-       target="_blank"
-       rel="noopener noreferrer">
-       <i class="fab fa-tiktok"></i>TikTok
+
+    <a
+      class="tiktok"
+      href="https://www.tiktok.com/@manu.s822"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <i class="fab fa-tiktok"></i>
+      TikTok
+
     </a>
 
-    <a class="instagram"
-       href="https://www.instagram.com/manu.salami.magar"
-       target="_blank"
-       rel="noopener noreferrer">
-       <i class="fab fa-instagram"></i>Instagram
+
+    <a
+      class="instagram"
+      href="https://www.instagram.com/manu.salami.magar"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <i class="fab fa-instagram"></i>
+      Instagram
+
     </a>
 
   </div>
 
-  <a class="about-btn" href="#about">
+
+  <a
+    class="about-btn"
+    href="#about">
+
     मेरो बारेमा ↓
+
   </a>
 
 </section>
 
+
+<!-- ABOUT -->
+
 <section id="about">
 
   <div class="section-title">
-    <h2>मेरो बारेमा</h2>
-    <p>About Me</p>
+
+    <h2>
+      मेरो बारेमा
+    </h2>
+
+    <p>
+      About Me
+    </p>
+
   </div>
 
+
   <div class="about-box">
+
     <p>
-      नमस्कार! 🙏 म <strong>Manu Salami Magar</strong>।
-      म आफ्नो काम, सिर्जना, अनुभव र यात्रालाई डिजिटल संसारमार्फत
-      सबैसँग जोड्ने प्रयास गर्दैछु।
+
+      नमस्कार! 🙏 म
+      <strong>Manu Salami Magar</strong>।
+
+      म आफ्नो काम, सिर्जना,
+      अनुभव र यात्रालाई डिजिटल
+      संसारमार्फत सबैसँग जोड्ने
+      प्रयास गर्दैछु।
+
       <br><br>
-      यो वेबसाइट मेरो व्यक्तिगत परिचय र विभिन्न सिर्जनाहरूको
+
+      यो वेबसाइट मेरो व्यक्तिगत
+      परिचय र विभिन्न सिर्जनाहरूको
       डिजिटल स्थान हो।
+
     </p>
+
   </div>
 
 </section>
+
+
+<!-- WORK -->
 
 <section id="work">
 
   <div class="section-title">
-    <h2>मेरो काम र सिर्जना</h2>
-    <p>My Work & Creativity</p>
+
+    <h2>
+      मेरो काम र सिर्जना
+    </h2>
+
+    <p>
+      My Work & Creativity
+    </p>
+
   </div>
+
 
   <div class="cards">
 
     <div class="card">
+
       <i class="fas fa-utensils"></i>
-      <h3>Chinese Chef</h3>
-      <p>Hotel सम्बन्धी मेरो काम र अनुभव।</p>
+
+      <h3>
+        Chinese Chef
+      </h3>
+
+      <p>
+        Hotel सम्बन्धी मेरो काम
+        र अनुभव।
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <i class="fas fa-video"></i>
-      <h3>Video Creation</h3>
-      <p>Social Media का लागि विभिन्न भिडियो तथा creative content निर्माण।</p>
+
+      <h3>
+        Video Creation
+      </h3>
+
+      <p>
+        Social Media का लागि
+        विभिन्न भिडियो तथा
+        creative content निर्माण।
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <i class="fas fa-music"></i>
-      <h3>Music & Creativity</h3>
-      <p>गीत, संगीत तथा creative project हरू।</p>
+
+      <h3>
+        Music & Creativity
+      </h3>
+
+      <p>
+        गीत, संगीत तथा creative
+        project हरू।
+      </p>
+
     </div>
 
+
     <div class="card">
+
       <i class="fas fa-camera"></i>
-      <h3>Photography</h3>
-      <p>प्रकृति, यात्रा र जीवनका सुन्दर क्षणहरू।</p>
+
+      <h3>
+        Photography
+      </h3>
+
+      <p>
+        प्रकृति, यात्रा र जीवनका
+        सुन्दर क्षणहरू।
+      </p>
+
     </div>
 
   </div>
 
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
 
   <div class="section-title">
-    <h2>Contact</h2>
-    <p>मसँग जोडिनुहोस्</p>
-  </div>
 
-  <div class="contact-box">
+    <h2>
+      Contact
+    </h2>
+
     <p>
-      मेरो Social Media मार्फत मसँग जोडिन सक्नुहुन्छ।
+      मसँग जोडिनुहोस्
     </p>
 
-    <a class="contact-btn" href="#home">
+  </div>
+
+
+  <div class="contact-box">
+
+    <p>
+      मेरो Social Media मार्फत
+      मसँग जोडिन सक्नुहुन्छ।
+    </p>
+
+    <a
+      class="contact-btn"
+      href="#home">
+
       Social Media हेर्नुहोस् ↑
+
     </a>
+
   </div>
 
 </section>
 
+
 <footer>
-  © 2026 Manu And Hira | Manu Salami Magar
+
+  © 2026 Manu And Hira |
+  Manu Salami Magar
+
 </footer>
 
-<!-- Visitor information modal -->
-<div class="modal" id="visitorModal" onclick="closeVisitorModal(event)">
+
+<!-- VISITOR MODAL -->
+
+<div
+  class="modal"
+  id="visitorModal"
+  onclick="closeVisitorModal(event)">
 
   <div class="modal-box">
 
-    <button class="close-modal" onclick="closeVisitorModal()">
+    <button
+      class="close-modal"
+      onclick="closeVisitorModal()">
+
       ×
+
     </button>
+
 
     <h3 id="modalTitle">
       Visitor Information
     </h3>
 
-    <p id="modalText"></p>
+
+    <p id="modalText">
+      Website statistics
+    </p>
+
 
     <div class="detail-list">
 
       <div class="detail">
-        <span>🌍 Country</span>
-        <span id="mCountry">—</span>
+
+        <span>
+          👁️ Total Views
+        </span>
+
+        <span id="mViews">
+          —
+        </span>
+
       </div>
 
-      <div class="detail">
-        <span>📍 General location</span>
-        <span id="mLocation">—</span>
-      </div>
 
       <div class="detail">
-        <span>📱 Device</span>
-        <span id="mDevice">—</span>
+
+        <span>
+          👤 Visitors
+        </span>
+
+        <span id="mVisitors">
+          —
+        </span>
+
       </div>
 
-      <div class="detail">
-        <span>🌐 Browser</span>
-        <span id="mBrowser">—</span>
-      </div>
 
       <div class="detail">
-        <span>🕐 Visit time</span>
-        <span id="mTime">—</span>
+
+        <span>
+          📅 Today's Views
+        </span>
+
+        <span id="mToday">
+          —
+        </span>
+
+      </div>
+
+
+      <div class="detail">
+
+        <span>
+          🌍 Source
+        </span>
+
+        <span id="mSource">
+          —
+        </span>
+
       </div>
 
     </div>
 
+
     <p>
-      व्यक्तिगत नाम, फोन नम्बर वा account identity देखाइँदैन।
-      Location पनि सामान्य/अनुमानित हुन सक्छ।
+
+      GoatCounter ले page views र
+      visits छुट्टाछुट्टै track गर्छ।
+      व्यक्तिगत नाम वा account identity
+      यहाँ देखाइँदैन।
+
     </p>
 
-    <a class="stats-link"
-       href="https://manu-hira.goatcounter.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-       Full Visitor Statistics खोल्नुहोस्
+
+    <a
+      class="stats-link"
+      href="https://manu-hira.goatcounter.com/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      Full Visitor Statistics खोल्नुहोस्
+
     </a>
 
   </div>
 
 </div>
 
+
 <script>
 
-  /* GoatCounter */
+  /*
+   ==========================================
+   MANU AND HIRA - VISITOR COUNTER
+   ==========================================
+
+   GoatCounter code:
+   manu-hira
+
+   GoatCounter:
+   https://manu-hira.goatcounter.com/
+
+   ==========================================
+  */
+
+
   const GC_CODE = "manu-hira";
 
-  async function getCount(path, start) {
 
-    let url =
-      "https://" +
-      GC_CODE +
-      ".goatcounter.com/counter/" +
-      encodeURIComponent(path) +
-      ".json";
+  /*
+   Get page count from GoatCounter
+  */
 
-    if (start) {
-      url += "?start=" + encodeURIComponent(start);
-    }
+  async function getPageCount(path){
 
-    try {
+    try{
 
-      const r = await fetch(url);
+      const encodedPath =
+        encodeURIComponent(path);
 
-      if (!r.ok) return null;
+      const url =
+        "https://" +
+        GC_CODE +
+        ".goatcounter.com/counter/" +
+        encodedPath +
+        ".json";
 
-      const data = await r.json();
+      const response =
+        await fetch(url);
+
+      if(!response.ok){
+        return null;
+      }
+
+      const data =
+        await response.json();
 
       return data.count || "0";
 
-    } catch(e) {
+    }
+
+    catch(error){
+
+      console.log(
+        "GoatCounter error:",
+        error
+      );
 
       return null;
 
@@ -466,151 +1228,286 @@
 
   }
 
-  async function loadVisitorCounts() {
+
+  /*
+   Load website statistics
+  */
+
+  async function loadVisitorStatistics(){
+
+    /*
+     TOTAL = complete website
+     pageview count
+    */
 
     const total =
-      await getCount("TOTAL");
+      await getPageCount("TOTAL");
 
-    const today =
-      await getCount("/", "day");
 
-    document.getElementById("totalViews").textContent =
-      total ?? "—";
+    /*
+     Current homepage count
+    */
 
-    document.getElementById("todayViews").textContent =
-      today ?? "—";
+    const home =
+      await getPageCount("/");
 
-    document.getElementById("visitors").textContent =
-      total ?? "—";
 
-    document.getElementById("locationText").textContent =
+    /*
+     Display total views
+    */
+
+    document.getElementById(
+      "totalViews"
+    ).textContent =
+      total !== null
+      ? total
+      : "—";
+
+
+    /*
+     Today is intentionally shown
+     separately through GoatCounter
+     dashboard because the public
+     counter endpoint is cached.
+    */
+
+    document.getElementById(
+      "todayViews"
+    ).textContent =
       "View";
 
+
+    /*
+     GoatCounter's public counter
+     endpoint represents visitor/visit
+     counts for the selected path,
+     not a fake copy of total views.
+    */
+
+    document.getElementById(
+      "visitors"
+    ).textContent =
+      home !== null
+      ? home
+      : "—";
+
+
+    /*
+     Show traffic source based on
+     the current visit's referrer.
+
+     If someone arrives from Google,
+     this will display Google.
+    */
+
+    const referrer =
+      document.referrer || "";
+
+
+    let source =
+      "Direct";
+
+
+    if(
+      /google\./i.test(referrer)
+    ){
+
+      source =
+        "Google";
+
+    }
+
+    else if(
+      /facebook\.com|fb\.com/i.test(referrer)
+    ){
+
+      source =
+        "Facebook";
+
+    }
+
+    else if(
+      /youtube\.com|youtu\.be/i.test(referrer)
+    ){
+
+      source =
+        "YouTube";
+
+    }
+
+    else if(
+      /instagram\.com/i.test(referrer)
+    ){
+
+      source =
+        "Instagram";
+
+    }
+
+    else if(
+      /tiktok\.com/i.test(referrer)
+    ){
+
+      source =
+        "TikTok";
+
+    }
+
+    else if(
+      referrer
+    ){
+
+      source =
+        "Other";
+
+    }
+
+
+    document.getElementById(
+      "sourceText"
+    ).textContent =
+      source;
+
+
+    /*
+     Modal values
+    */
+
+    document.getElementById(
+      "mViews"
+    ).textContent =
+      total !== null
+      ? total
+      : "—";
+
+
+    document.getElementById(
+      "mVisitors"
+    ).textContent =
+      home !== null
+      ? home
+      : "—";
+
+
+    document.getElementById(
+      "mToday"
+    ).textContent =
+      "GoatCounter";
+
+
+    document.getElementById(
+      "mSource"
+    ).textContent =
+      source;
+
   }
 
-  function deviceName() {
 
-    const ua = navigator.userAgent;
+  /*
+   Visitor modal
+  */
 
-    if (/Android/i.test(ua))
-      return "Android";
-
-    if (/iPhone|iPad|iPod/i.test(ua))
-      return "iPhone/iPad";
-
-    if (/Windows/i.test(ua))
-      return "Windows";
-
-    if (/Macintosh/i.test(ua))
-      return "Mac";
-
-    return "Other";
-
-  }
-
-  function browserName() {
-
-    const ua = navigator.userAgent;
-
-    if (/Edg/i.test(ua))
-      return "Microsoft Edge";
-
-    if (/Chrome/i.test(ua) && !/Edg/i.test(ua))
-      return "Chrome";
-
-    if (/Firefox/i.test(ua))
-      return "Firefox";
-
-    if (/Safari/i.test(ua) && !/Chrome/i.test(ua))
-      return "Safari";
-
-    return "Other";
-
-  }
-
-  function openVisitorModal(type) {
+  function openVisitorModal(type){
 
     const modal =
-      document.getElementById("visitorModal");
+      document.getElementById(
+        "visitorModal"
+      );
+
 
     const title =
-      document.getElementById("modalTitle");
+      document.getElementById(
+        "modalTitle"
+      );
+
 
     const text =
-      document.getElementById("modalText");
+      document.getElementById(
+        "modalText"
+      );
 
-    if (type === "views") {
 
-      title.textContent = "👁️ Total Views";
+    if(type === "views"){
+
+      title.textContent =
+        "👁️ Total Views";
 
       text.textContent =
-        "यो वेबसाइटमा जम्मा भएको page-view संख्या।";
+        "तपाईंको वेबसाइटमा जम्मा भएका page views।";
 
     }
 
-    else if (type === "visitors") {
 
-      title.textContent = "👤 Visitors";
+    else if(type === "visitors"){
+
+      title.textContent =
+        "👤 Visitors";
 
       text.textContent =
-        "Visitor statistics बाट सामान्य जानकारी हेर्न सकिन्छ। व्यक्तिगत नाम भने देखिँदैन।";
+        "GoatCounter को visit/session tracking अनुसारको संख्या।";
 
     }
 
-    else if (type === "today") {
 
-      title.textContent = "📅 Today's Views";
+    else if(type === "today"){
+
+      title.textContent =
+        "📅 Today's Views";
 
       text.textContent =
-        "आजको page-view संख्या।";
+        "आजको statistics GoatCounter dashboard मा हेर्न सकिन्छ।";
 
     }
 
-    else {
 
-      title.textContent = "🌍 Visitor Location";
+    else{
+
+      title.textContent =
+        "🌍 Traffic Source";
 
       text.textContent =
-        "Visitor location सामान्य/aggregate रूपमा statistics dashboard मा हेर्न सकिन्छ।";
+        "यो visit कहाँबाट आएको हो भन्ने सामान्य source जानकारी।";
 
     }
 
-    document.getElementById("mCountry").textContent =
-      "Statistics dashboard";
-
-    document.getElementById("mLocation").textContent =
-      "Aggregate location";
-
-    document.getElementById("mDevice").textContent =
-      deviceName();
-
-    document.getElementById("mBrowser").textContent =
-      browserName();
-
-    document.getElementById("mTime").textContent =
-      new Date().toLocaleString();
 
     modal.classList.add("show");
 
   }
 
-  function closeVisitorModal(event) {
 
-    if (
+  /*
+   Close modal
+  */
+
+  function closeVisitorModal(event){
+
+    if(
       !event ||
       event.target.id === "visitorModal" ||
-      event.target.classList.contains("close-modal")
-    ) {
+      event.target.classList.contains(
+        "close-modal"
+      )
+    ){
 
       document
-        .getElementById("visitorModal")
-        .classList.remove("show");
+        .getElementById(
+          "visitorModal"
+        )
+        .classList.remove(
+          "show"
+        );
 
     }
 
   }
 
-  loadVisitorCounts();
+
+  /*
+   Load statistics
+  */
+
+  loadVisitorStatistics();
 
 </script>
 
