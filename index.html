@@ -14,7 +14,6 @@
 
   <link rel="canonical" href="https://manu-hira.github.io/">
 
-  <!-- Google / Social Media Preview -->
   <meta property="og:title" content="Manu And Hira | Official Website">
   <meta property="og:description"
         content="नमस्कार! 🙏 म Manu Salami Magar। यो मेरो Official Website हो।">
@@ -24,16 +23,19 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Manu And Hira | Official Website">
-  <meta name="twitter:description"
-        content="Manu Salami Magar को Official Website">
-  <meta name="twitter:image"
-        content="https://manu-hira.github.io/profile.jpg">
+  <meta name="twitter:description" content="Manu Salami Magar को Official Website">
+  <meta name="twitter:image" content="https://manu-hira.github.io/profile_new.jpg">
 
-  <!-- Social Media Icons -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- Google Structured Data -->
+  <!-- GoatCounter Visitor Counter -->
+  <script
+    data-goatcounter="https://manu-hira.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+  </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,616 +55,564 @@
   </script>
 
   <style>
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    body{font-family:Arial,sans-serif;background:#070b14;color:white;line-height:1.7;overflow-x:hidden}
+    body::before{content:"";position:fixed;width:500px;height:500px;background:#6c63ff;filter:blur(180px);opacity:.16;top:-200px;left:-150px;z-index:-1}
+    body::after{content:"";position:fixed;width:450px;height:450px;background:#00d4ff;filter:blur(180px);opacity:.12;bottom:-200px;right:-150px;z-index:-1}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+    header{position:sticky;top:0;z-index:1000;background:rgba(7,11,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+    nav{max-width:1100px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:23px;font-weight:bold;letter-spacing:1px;white-space:nowrap}
+    .logo .manu,.hero h1 .manu{color:white}
+    .logo .and,.hero h1 .and{color:#ffd43b}
+    .logo .hira,.hero h1 .hira{color:#00d4ff}
+
+    nav ul{list-style:none;display:flex;gap:22px}
+    nav ul li a{color:white;text-decoration:none;font-size:14px;transition:.3s}
+    nav ul li a:hover{color:#00d4ff}
+
+    section{max-width:1100px;margin:auto;padding:80px 20px}
+    .hero{min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column}
+    .badge{display:inline-block;padding:8px 18px;border:1px solid rgba(255,255,255,.15);border-radius:30px;background:rgba(255,255,255,.05);margin-bottom:25px;font-size:14px}
+
+    /* Visitor statistics */
+    .visitor-wrap{width:100%;max-width:950px;margin:0 auto 30px}
+    .visitor-title{text-align:center;color:#aeb5c5;font-size:13px;margin-bottom:10px}
+    .visitor-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .visitor-card{border:1px solid rgba(0,212,255,.38);background:rgba(9,20,43,.72);border-radius:18px;padding:15px 8px;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:.25s;box-shadow:0 0 18px rgba(0,212,255,.05)}
+    .visitor-card:hover{transform:translateY(-3px);background:rgba(15,31,60,.9)}
+    .visitor-card i{font-size:25px;margin-bottom:5px}
+    .visitor-card:nth-child(1) i{color:#00d4ff}
+    .visitor-card:nth-child(2) i{color:#32e6a8}
+    .visitor-card:nth-child(3) i{color:#ff55c8}
+    .visitor-card:nth-child(4) i{color:#ffd43b}
+    .visitor-card .label{font-size:14px;color:#d8deea}
+    .visitor-card .number{font-size:25px;font-weight:bold;margin-top:2px}
+    .visitor-card:nth-child(1) .number{color:#00d4ff}
+    .visitor-card:nth-child(2) .number{color:#32e6a8}
+    .visitor-card:nth-child(3) .number{color:#ff55c8}
+    .visitor-card:nth-child(4) .number{color:#ffd43b}
+    .visitor-card .small{font-size:11px;color:#9da8bb;margin-top:2px}
+    .visitor-help{font-size:11px;color:#8995aa;text-align:center;margin-top:7px}
+
+    /* Visitor modal */
+    .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:3000;padding:25px;align-items:center;justify-content:center}
+    .modal.show{display:flex}
+    .modal-box{width:min(470px,100%);background:#0b1223;border:1px solid rgba(0,212,255,.35);border-radius:22px;padding:25px;box-shadow:0 20px 70px rgba(0,0,0,.5);position:relative}
+    .modal-box h3{font-size:22px;margin-bottom:12px}
+    .modal-box p{color:#c6cedd;font-size:14px;margin-bottom:12px}
+    .detail-list{display:grid;gap:8px;margin:15px 0}
+    .detail{display:flex;justify-content:space-between;gap:15px;background:rgba(255,255,255,.05);border-radius:12px;padding:9px 12px;font-size:13px}
+    .detail span:first-child{color:#9eabc0}
+    .detail span:last-child{color:white;text-align:right}
+    .close-modal{position:absolute;right:12px;top:10px;border:0;background:transparent;color:white;font-size:25px;cursor:pointer}
+    .stats-link{display:inline-block;margin-top:5px;padding:9px 15px;border-radius:20px;background:#00d4ff;color:#001018;text-decoration:none;font-weight:bold;font-size:13px}
+
+    .profile-photo{width:210px;height:210px;border-radius:50%;overflow:hidden;margin-bottom:25px;border:4px solid #00d4ff;box-shadow:0 0 35px rgba(0,212,255,.35)}
+    .profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .hero h1{font-size:clamp(42px,8vw,80px);line-height:1.15;margin-bottom:20px;white-space:nowrap}
+    .hero p{max-width:760px;font-size:18px;color:#d0d4df;margin-bottom:30px}
+    .hero p strong{color:white}
+
+    .social-title{font-size:20px;font-weight:bold;margin-bottom:17px}
+    .socials{display:flex;flex-wrap:wrap;justify-content:center;gap:13px;margin-bottom:32px;max-width:850px}
+    .socials a{display:flex;align-items:center;gap:9px;padding:11px 19px;border-radius:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:white;text-decoration:none;transition:.3s}
+    .socials a:hover{transform:translateY(-4px);background:rgba(255,255,255,.14)}
+    .socials i{font-size:21px}
+    .facebook i{color:#1877F2}
+    .youtube i{color:#FF0000}
+    .tiktok i{color:#25F4EE;text-shadow:2px 2px 0 #FE2C55}
+    .instagram i{color:#E4405F}
+
+    .about-btn{display:inline-block;padding:12px 27px;border-radius:30px;background:#00d4ff;color:#001018;font-weight:bold;text-decoration:none;transition:.3s}
+    .about-btn:hover{transform:translateY(-3px)}
+
+    .section-title{text-align:center;margin-bottom:45px}
+    .section-title h2{font-size:36px;margin-bottom:8px}
+    .section-title p{color:#aeb5c5}
+
+    .about-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:35px;border-radius:20px;text-align:center}
+    .about-box p{color:#d5d9e3;font-size:17px}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px 22px;text-align:center;transition:.3s}
+    .card:hover{transform:translateY(-7px);background:rgba(255,255,255,.08)}
+    .card i{font-size:38px;color:#00d4ff;margin-bottom:15px}
+    .card h3{margin-bottom:10px}
+    .card p{color:#b9c0ce;font-size:14px}
+
+    .contact-box{text-align:center;background:rgba(255,255,255,.05);padding:45px 20px;border-radius:20px;border:1px solid rgba(255,255,255,.08)}
+    .contact-box p{color:#c8ceda;margin-bottom:20px}
+    .contact-btn{display:inline-block;padding:12px 25px;background:#00d4ff;color:#001018;border-radius:30px;text-decoration:none;font-weight:bold}
+
+    footer{text-align:center;padding:30px 20px;border-top:1px solid rgba(255,255,255,.08);color:#8991a2;font-size:14px}
+
+    @media(max-width:700px){
+      nav{flex-direction:column;gap:10px}
+      nav ul{gap:15px;flex-wrap:wrap;justify-content:center}
+      nav ul li a{font-size:13px}
+      .hero{min-height:85vh}
+      .profile-photo{width:175px;height:175px}
+      .hero h1{font-size:42px;white-space:normal}
+      .hero p{font-size:16px}
+      .socials a{padding:10px 15px;font-size:14px}
+      .about-box{padding:25px 18px}
+      .visitor-grid{grid-template-columns:repeat(2,1fr)}
+      .visitor-card{min-height:105px}
+      .visitor-card .number{font-size:22px}
     }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #070b14;
-      color: white;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* Background Glow */
-    body::before {
-      content: "";
-      position: fixed;
-      width: 500px;
-      height: 500px;
-      background: #6c63ff;
-      filter: blur(180px);
-      opacity: 0.16;
-      top: -200px;
-      left: -150px;
-      z-index: -1;
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      width: 450px;
-      height: 450px;
-      background: #00d4ff;
-      filter: blur(180px);
-      opacity: 0.12;
-      bottom: -200px;
-      right: -150px;
-      z-index: -1;
-    }
-
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7, 11, 20, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 23px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      white-space: nowrap;
-    }
-
-    .logo .manu {
-      color: white;
-    }
-
-    .logo .and {
-      color: #ffd43b;
-    }
-
-    .logo .hira {
-      color: #00d4ff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 22px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #00d4ff;
-    }
-
-    /* Sections */
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    /* Hero */
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 18px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 30px;
-      background: rgba(255,255,255,0.05);
-      margin-bottom: 25px;
-      font-size: 14px;
-    }
-
-    /* Profile Photo */
-    .profile-photo {
-      width: 210px;
-      height: 210px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-bottom: 25px;
-      border: 4px solid #00d4ff;
-      box-shadow: 0 0 35px rgba(0,212,255,0.35);
-    }
-
-    .profile-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Main Name */
-    .hero h1 {
-      font-size: clamp(42px, 8vw, 80px);
-      line-height: 1.15;
-      margin-bottom: 20px;
-      white-space: nowrap;
-    }
-
-    .hero h1 .manu {
-      color: white;
-    }
-
-    .hero h1 .and {
-      color: #ffd43b;
-    }
-
-    .hero h1 .hira {
-      color: #00d4ff;
-    }
-
-    .hero p {
-      max-width: 760px;
-      font-size: 18px;
-      color: #d0d4df;
-      margin-bottom: 30px;
-    }
-
-    .hero p strong {
-      color: white;
-    }
-
-    /* Social Media */
-    .social-title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 17px;
-    }
-
-    .socials {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 13px;
-      margin-bottom: 32px;
-      max-width: 850px;
-    }
-
-    .socials a {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      padding: 11px 19px;
-      border-radius: 30px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .socials a:hover {
-      transform: translateY(-4px);
-      background: rgba(255,255,255,0.14);
-    }
-
-    .socials i {
-      font-size: 21px;
-    }
-
-    /* Real Brand Colors */
-    .facebook i {
-      color: #1877F2;
-    }
-
-    .youtube i {
-      color: #FF0000;
-    }
-
-    .tiktok i {
-      color: #25F4EE;
-      text-shadow: 2px 2px 0 #FE2C55;
-    }
-
-    .instagram i {
-      color: #E4405F;
-    }
-
-    /* About Button */
-    .about-btn {
-      display: inline-block;
-      padding: 12px 27px;
-      border-radius: 30px;
-      background: #00d4ff;
-      color: #001018;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .about-btn:hover {
-      transform: translateY(-3px);
-    }
-
-    /* Section Title */
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #aeb5c5;
-    }
-
-    /* About */
-    .about-box {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 35px;
-      border-radius: 20px;
-      text-align: center;
-    }
-
-    .about-box p {
-      color: #d5d9e3;
-      font-size: 17px;
-    }
-
-    /* Work Cards */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 20px;
-      padding: 30px 22px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-7px);
-      background: rgba(255,255,255,0.08);
-    }
-
-    .card i {
-      font-size: 38px;
-      color: #00d4ff;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #b9c0ce;
-      font-size: 14px;
-    }
-
-    /* Contact */
-    .contact-box {
-      text-align: center;
-      background: rgba(255,255,255,0.05);
-      padding: 45px 20px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .contact-box p {
-      color: #c8ceda;
-      margin-bottom: 20px;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #00d4ff;
-      color: #001018;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: #8991a2;
-      font-size: 14px;
-    }
-
-    /* Mobile */
-    @media (max-width: 700px) {
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      nav ul li a {
-        font-size: 13px;
-      }
-
-      .hero {
-        min-height: 85vh;
-      }
-
-      .profile-photo {
-        width: 175px;
-        height: 175px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-        white-space: normal;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .socials a {
-        padding: 10px 15px;
-        font-size: 14px;
-      }
-
-      .about-box {
-        padding: 25px 18px;
-      }
-    }
-
   </style>
-  
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Manu Salami Magar",
-  "url": "https://manu-hira.github.io/",
-  "image": "https://manu-hira.github.io/profile_new.jpg"
-}
-  </script> 
-
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav>
-
-      <div class="logo">
-        <span class="manu">Manu</span>
-        <span class="and"> And </span>
-        <span class="hira">Hira</span>
-      </div>
-
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-    </nav>
-  </header>
-
-
-  <!-- WELCOME -->
-  <section class="hero" id="home">
-
-    <div class="badge">
-      ✨ Welcome to my official website
-    </div>
-
-    <!-- YOUR PHOTO -->
-    <div class="profile-photo">
-    <img src="profile_new.jpg" alt="Manu Salami Magar">
-    </div>
-
-    <!-- NAME -->
-    <h1>
+<header>
+  <nav>
+    <div class="logo">
       <span class="manu">Manu</span>
       <span class="and"> And </span>
       <span class="hira">Hira</span>
-    </h1>
-
-    <p>
-      नमस्कार! 🙏 
-             म <strong>Manu Salami Magar</strong><br>
-      यो मेरो Official Website हो। यहाँ मेरो सिर्जना, यात्रा,
-      काम र Social Media को संसारसँग जोडिन सक्नुहुन्छ।
-    </p>
-
-
-    <!-- SOCIAL MEDIA -->
-    <div class="social-title">
-      🔗 Connect With Me ❤️
     </div>
 
-    <div class="socials">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <a class="facebook"
-         href="https://www.facebook.com/share/1CH7VyjcPX/"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-facebook"></i>
-        Facebook
-      </a>
+<section class="hero" id="home">
 
-      <a class="facebook"
-         href="https://www.facebook.com/share/1GZbSuEcnR/"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-facebook"></i>
-        Facebook Page
-      </a>
+  <!-- Visitor statistics -->
+  <div class="visitor-wrap">
+    <div class="visitor-grid">
 
-      <a class="youtube"
-         href="https://youtube.com/@m.s.m.822"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-youtube"></i>
-        YouTube
-      </a>
+      <div class="visitor-card" onclick="openVisitorModal('views')">
+        <i class="fas fa-eye"></i>
+        <div class="label">Total Views</div>
+        <div class="number" id="totalViews">—</div>
+        <div class="small">पूरै वेबसाइट</div>
+      </div>
 
-      <a class="tiktok"
-         href="https://www.tiktok.com/@manu.s822"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-tiktok"></i>
-        TikTok
-      </a>
+      <div class="visitor-card" onclick="openVisitorModal('visitors')">
+        <i class="fas fa-user"></i>
+        <div class="label">Visitors</div>
+        <div class="number" id="visitors">—</div>
+        <div class="small">Visitor data</div>
+      </div>
 
-      <a class="instagram"
-         href="https://www.instagram.com/manu.salami.magar"
-         target="_blank"
-         rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-        Instagram
-      </a>
+      <div class="visitor-card" onclick="openVisitorModal('today')">
+        <i class="fas fa-calendar-days"></i>
+        <div class="label">Today's Views</div>
+        <div class="number" id="todayViews">—</div>
+        <div class="small">आजको view</div>
+      </div>
+
+      <div class="visitor-card" onclick="openVisitorModal('location')">
+        <i class="fas fa-globe"></i>
+        <div class="label">Location</div>
+        <div class="number" id="locationText">—</div>
+        <div class="small">सामान्य location</div>
+      </div>
 
     </div>
 
-    <a class="about-btn" href="#about">
-      मेरो बारेमा ↓
+    <div class="visitor-help">
+      कुनै card मा टच गरेर थप जानकारी हेर्नुहोस्
+    </div>
+  </div>
+
+  <div class="badge">✨ Welcome to my official website</div>
+
+  <div class="profile-photo">
+    <img src="profile_new.jpg" alt="Manu Salami Magar">
+  </div>
+
+  <h1>
+    <span class="manu">Manu</span>
+    <span class="and"> And </span>
+    <span class="hira">Hira</span>
+  </h1>
+
+  <p>
+    नमस्कार! 🙏 म <strong>Manu Salami Magar</strong><br>
+    यो मेरो Official Website हो। यहाँ मेरो सिर्जना, यात्रा,
+    काम र Social Media को संसारसँग जोडिन सक्नुहुन्छ।
+  </p>
+
+  <div class="social-title">🔗 Connect With Me ❤️</div>
+
+  <div class="socials">
+
+    <a class="facebook"
+       href="https://www.facebook.com/share/1CH7VyjcPX/"
+       target="_blank"
+       rel="noopener noreferrer">
+       <i class="fab fa-facebook"></i>Facebook
     </a>
 
-  </section>
+    <a class="facebook"
+       href="https://www.facebook.com/share/1GZbSuEcnR/"
+       target="_blank"
+       rel="noopener noreferrer">
+       <i class="fab fa-facebook"></i>Facebook Page
+    </a>
 
+    <a class="youtube"
+       href="https://youtube.com/@m.s.m.822"
+       target="_blank"
+       rel="noopener noreferrer">
+       <i class="fab fa-youtube"></i>YouTube
+    </a>
 
-  <!-- ABOUT -->
-  <section id="about">
+    <a class="tiktok"
+       href="https://www.tiktok.com/@manu.s822"
+       target="_blank"
+       rel="noopener noreferrer">
+       <i class="fab fa-tiktok"></i>TikTok
+    </a>
 
-    <div class="section-title">
-      <h2>मेरो बारेमा</h2>
-      <p>About Me</p>
+    <a class="instagram"
+       href="https://www.instagram.com/manu.salami.magar"
+       target="_blank"
+       rel="noopener noreferrer">
+       <i class="fab fa-instagram"></i>Instagram
+    </a>
+
+  </div>
+
+  <a class="about-btn" href="#about">
+    मेरो बारेमा ↓
+  </a>
+
+</section>
+
+<section id="about">
+
+  <div class="section-title">
+    <h2>मेरो बारेमा</h2>
+    <p>About Me</p>
+  </div>
+
+  <div class="about-box">
+    <p>
+      नमस्कार! 🙏 म <strong>Manu Salami Magar</strong>।
+      म आफ्नो काम, सिर्जना, अनुभव र यात्रालाई डिजिटल संसारमार्फत
+      सबैसँग जोड्ने प्रयास गर्दैछु।
+      <br><br>
+      यो वेबसाइट मेरो व्यक्तिगत परिचय र विभिन्न सिर्जनाहरूको
+      डिजिटल स्थान हो।
+    </p>
+  </div>
+
+</section>
+
+<section id="work">
+
+  <div class="section-title">
+    <h2>मेरो काम र सिर्जना</h2>
+    <p>My Work & Creativity</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <i class="fas fa-utensils"></i>
+      <h3>Chinese Chef</h3>
+      <p>Hotel सम्बन्धी मेरो काम र अनुभव।</p>
     </div>
 
-    <div class="about-box">
-
-      <p>
-        नमस्कार! 🙏
-                म <strong>Manu Salami Magar</strong>।
-        म आफ्नो काम, सिर्जना, अनुभव र यात्रालाई
-        डिजिटल संसारमार्फत सबैसँग जोड्ने प्रयास गर्दैछु।
-        <br><br>
-        यो वेबसाइट मेरो व्यक्तिगत परिचय र विभिन्न
-        सिर्जनाहरूको डिजिटल स्थान हो।
-      </p>
-
+    <div class="card">
+      <i class="fas fa-video"></i>
+      <h3>Video Creation</h3>
+      <p>Social Media का लागि विभिन्न भिडियो तथा creative content निर्माण।</p>
     </div>
 
-  </section>
-
-
-  <!-- WORK -->
-  <section id="work">
-
-    <div class="section-title">
-      <h2>मेरो काम र सिर्जना</h2>
-      <p>My Work & Creativity</p>
+    <div class="card">
+      <i class="fas fa-music"></i>
+      <h3>Music & Creativity</h3>
+      <p>गीत, संगीत तथा creative project हरू।</p>
     </div>
 
-    <div class="cards">
+    <div class="card">
+      <i class="fas fa-camera"></i>
+      <h3>Photography</h3>
+      <p>प्रकृति, यात्रा र जीवनका सुन्दर क्षणहरू।</p>
+    </div>
 
-      <div class="card">
-        <i class="fas fa-utensils"></i>
-        <h3>Chinese Chef</h3>
-        <p>
-          Hotel सम्बन्धी मेरो काम र अनुभव।
-        </p>
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <div class="section-title">
+    <h2>Contact</h2>
+    <p>मसँग जोडिनुहोस्</p>
+  </div>
+
+  <div class="contact-box">
+    <p>
+      मेरो Social Media मार्फत मसँग जोडिन सक्नुहुन्छ।
+    </p>
+
+    <a class="contact-btn" href="#home">
+      Social Media हेर्नुहोस् ↑
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Manu And Hira | Manu Salami Magar
+</footer>
+
+<!-- Visitor information modal -->
+<div class="modal" id="visitorModal" onclick="closeVisitorModal(event)">
+
+  <div class="modal-box">
+
+    <button class="close-modal" onclick="closeVisitorModal()">
+      ×
+    </button>
+
+    <h3 id="modalTitle">
+      Visitor Information
+    </h3>
+
+    <p id="modalText"></p>
+
+    <div class="detail-list">
+
+      <div class="detail">
+        <span>🌍 Country</span>
+        <span id="mCountry">—</span>
       </div>
 
-      <div class="card">
-        <i class="fas fa-video"></i>
-        <h3>Video Creation</h3>
-        <p>
-          Social Media का लागि विभिन्न भिडियो तथा
-          creative content निर्माण।
-        </p>
+      <div class="detail">
+        <span>📍 General location</span>
+        <span id="mLocation">—</span>
       </div>
 
-      <div class="card">
-        <i class="fas fa-music"></i>
-        <h3>Music & Creativity</h3>
-        <p>
-          गीत, संगीत तथा creative project हरू।
-        </p>
+      <div class="detail">
+        <span>📱 Device</span>
+        <span id="mDevice">—</span>
       </div>
 
-      <div class="card">
-        <i class="fas fa-camera"></i>
-        <h3>Photography</h3>
-        <p>
-          प्रकृति, यात्रा र जीवनका सुन्दर क्षणहरू।
-        </p>
+      <div class="detail">
+        <span>🌐 Browser</span>
+        <span id="mBrowser">—</span>
+      </div>
+
+      <div class="detail">
+        <span>🕐 Visit time</span>
+        <span id="mTime">—</span>
       </div>
 
     </div>
 
-  </section>
+    <p>
+      व्यक्तिगत नाम, फोन नम्बर वा account identity देखाइँदैन।
+      Location पनि सामान्य/अनुमानित हुन सक्छ।
+    </p>
 
+    <a class="stats-link"
+       href="https://manu-hira.goatcounter.com/"
+       target="_blank"
+       rel="noopener noreferrer">
+       Full Visitor Statistics खोल्नुहोस्
+    </a>
 
-  <!-- CONTACT -->
-  <section id="contact">
+  </div>
 
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>मसँग जोडिनुहोस्</p>
-    </div>
+</div>
 
-    <div class="contact-box">
+<script>
 
-      <p>
-        मेरो Social Media मार्फत मसँग जोडिन सक्नुहुन्छ।
-      </p>
+  /* GoatCounter */
+  const GC_CODE = "manu-hira";
 
-      <a class="contact-btn" href="#home">
-        Social Media हेर्नुहोस् ↑
-      </a>
+  async function getCount(path, start) {
 
-    </div>
+    let url =
+      "https://" +
+      GC_CODE +
+      ".goatcounter.com/counter/" +
+      encodeURIComponent(path) +
+      ".json";
 
-  </section>
+    if (start) {
+      url += "?start=" + encodeURIComponent(start);
+    }
 
+    try {
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Manu💘Hira | Manu Salami Magar
-  </footer>
+      const r = await fetch(url);
+
+      if (!r.ok) return null;
+
+      const data = await r.json();
+
+      return data.count || "0";
+
+    } catch(e) {
+
+      return null;
+
+    }
+
+  }
+
+  async function loadVisitorCounts() {
+
+    const total =
+      await getCount("TOTAL");
+
+    const today =
+      await getCount("/", "day");
+
+    document.getElementById("totalViews").textContent =
+      total ?? "—";
+
+    document.getElementById("todayViews").textContent =
+      today ?? "—";
+
+    document.getElementById("visitors").textContent =
+      total ?? "—";
+
+    document.getElementById("locationText").textContent =
+      "View";
+
+  }
+
+  function deviceName() {
+
+    const ua = navigator.userAgent;
+
+    if (/Android/i.test(ua))
+      return "Android";
+
+    if (/iPhone|iPad|iPod/i.test(ua))
+      return "iPhone/iPad";
+
+    if (/Windows/i.test(ua))
+      return "Windows";
+
+    if (/Macintosh/i.test(ua))
+      return "Mac";
+
+    return "Other";
+
+  }
+
+  function browserName() {
+
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua))
+      return "Microsoft Edge";
+
+    if (/Chrome/i.test(ua) && !/Edg/i.test(ua))
+      return "Chrome";
+
+    if (/Firefox/i.test(ua))
+      return "Firefox";
+
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua))
+      return "Safari";
+
+    return "Other";
+
+  }
+
+  function openVisitorModal(type) {
+
+    const modal =
+      document.getElementById("visitorModal");
+
+    const title =
+      document.getElementById("modalTitle");
+
+    const text =
+      document.getElementById("modalText");
+
+    if (type === "views") {
+
+      title.textContent = "👁️ Total Views";
+
+      text.textContent =
+        "यो वेबसाइटमा जम्मा भएको page-view संख्या।";
+
+    }
+
+    else if (type === "visitors") {
+
+      title.textContent = "👤 Visitors";
+
+      text.textContent =
+        "Visitor statistics बाट सामान्य जानकारी हेर्न सकिन्छ। व्यक्तिगत नाम भने देखिँदैन।";
+
+    }
+
+    else if (type === "today") {
+
+      title.textContent = "📅 Today's Views";
+
+      text.textContent =
+        "आजको page-view संख्या।";
+
+    }
+
+    else {
+
+      title.textContent = "🌍 Visitor Location";
+
+      text.textContent =
+        "Visitor location सामान्य/aggregate रूपमा statistics dashboard मा हेर्न सकिन्छ।";
+
+    }
+
+    document.getElementById("mCountry").textContent =
+      "Statistics dashboard";
+
+    document.getElementById("mLocation").textContent =
+      "Aggregate location";
+
+    document.getElementById("mDevice").textContent =
+      deviceName();
+
+    document.getElementById("mBrowser").textContent =
+      browserName();
+
+    document.getElementById("mTime").textContent =
+      new Date().toLocaleString();
+
+    modal.classList.add("show");
+
+  }
+
+  function closeVisitorModal(event) {
+
+    if (
+      !event ||
+      event.target.id === "visitorModal" ||
+      event.target.classList.contains("close-modal")
+    ) {
+
+      document
+        .getElementById("visitorModal")
+        .classList.remove("show");
+
+    }
+
+  }
+
+  loadVisitorCounts();
+
+</script>
 
 </body>
 </html>
